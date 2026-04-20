@@ -1,36 +1,12 @@
-// Tüpraş Yaşam v2 — side nav spy, smooth scroll, reveal
+/* ============ Reveal on scroll ============ */
 (function () {
-  // Smooth scroll for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (id.length > 1) {
-        const el = document.querySelector(id);
-        if (el) {
-          e.preventDefault();
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      }
-    });
-  });
-
-  // Side nav scroll-spy
-  const navLinks = Array.from(document.querySelectorAll(".sideNav__item"));
-  const sections = navLinks
-    .map((l) => document.querySelector(l.getAttribute("href")))
-    .filter(Boolean);
-  const onScroll = () => {
-    const y = window.scrollY + window.innerHeight * 0.35;
-    let activeIdx = 0;
-    sections.forEach((s, i) => {
-      if (s.offsetTop <= y) activeIdx = i;
-    });
-    navLinks.forEach((l, i) => l.classList.toggle("is-active", i === activeIdx));
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
-
-  // Reveal on scroll
+  const targets = document.querySelectorAll(
+    ".tile, .strip__item, .section__head, .section__body, .volStrip, .logoWall, .cta__inner"
+  );
+  if (!("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -40,12 +16,56 @@
         }
       });
     },
-    { threshold: 0.1, rootMargin: "0px 0px -80px 0px" }
+    { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
   );
-  document
-    .querySelectorAll(".story, .mosaic__card, .growthRow, .about, .bigCta, .chapterHead")
-    .forEach((el) => {
-      el.classList.add("reveal");
-      observer.observe(el);
-    });
+  targets.forEach((el) => {
+    el.classList.add("reveal");
+    observer.observe(el);
+  });
+})();
+
+/* ============ Animated counters ============ */
+(function () {
+  const counters = document.querySelectorAll("[data-count]");
+  if (!counters.length) return;
+
+  const formatNumber = (n) => {
+    if (n >= 1000) return n.toLocaleString("tr-TR");
+    return String(n);
+  };
+
+  const animate = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || "";
+    const duration = 1400;
+    const start = performance.now();
+    const startVal = 0;
+
+    const step = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      // easeOutQuart
+      const eased = 1 - Math.pow(1 - t, 4);
+      const value = Math.round(startVal + (target - startVal) * eased);
+      el.textContent = formatNumber(value) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    counters.forEach(animate);
+    return;
+  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+  counters.forEach((el) => observer.observe(el));
 })();

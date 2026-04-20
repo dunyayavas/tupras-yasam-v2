@@ -3,436 +3,537 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tüpraş Yaşam — Editorial</title>
+    <title>Tüpraş Yaşam</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,700&family=Caveat:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
-    <!-- Sticky side progress nav -->
-    <aside class="sideNav" aria-label="Section navigation">
-      <a class="sideNav__item is-active" href="#hero" data-nav="hero">
-        <span class="sideNav__dot"></span>
-        <span class="sideNav__label">Giriş</span>
-      </a>
-      <a class="sideNav__item" href="#about" data-nav="about">
-        <span class="sideNav__dot"></span>
-        <span class="sideNav__label">Yaşam</span>
-      </a>
-      <a class="sideNav__item" href="#calisma" data-nav="calisma">
-        <span class="sideNav__dot"></span>
-        <span class="sideNav__label">Çalışma</span>
-      </a>
-      <a class="sideNav__item" href="#sosyal" data-nav="sosyal">
-        <span class="sideNav__dot"></span>
-        <span class="sideNav__label">Sosyal</span>
-      </a>
-      <a class="sideNav__item" href="#gelisim" data-nav="gelisim">
-        <span class="sideNav__dot"></span>
-        <span class="sideNav__label">Gelişim</span>
-      </a>
-    </aside>
-
-    <!-- ===== TOPBAR ===== -->
-    <header class="topbar" role="navigation">
-      <div class="topbar__inner container">
-        <a class="topbar__brand" href="#">
-          <img class="topbar__brandLogo" alt="Tüpraş Yaşam" src="assets/images/logo-horizontal.png" />
+    <!-- ============ TOP BAR ============ -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="#" class="topbar__brand" aria-label="Tüpraş Yaşam">
+          <img src="assets/images/logo-horizontal.png" alt="Tüpraş Yaşam" />
         </a>
-        <nav class="topbar__nav">
-          <a class="topbar__link" href="#">Kurumsal</a>
-          <a class="topbar__link" href="#">Ürünler</a>
-          <a class="topbar__link" href="#">Sürdürülebilirlik</a>
-          <a class="topbar__link topbar__link--active" href="#">Tüpraş Yaşam</a>
-          <a class="topbar__link" href="#">Medya</a>
+        <nav class="topbar__nav" aria-label="Ana menü">
+          <a href="#yasam">Yaşam</a>
+          <a href="#calisma">Çalışma</a>
+          <a href="#sosyal">Sosyal Hayat</a>
+          <a href="#gelisim">Gelişim</a>
         </nav>
-        <div class="topbar__actions">
-          <button class="topbar__action">EN</button>
-          <button class="topbar__action" aria-label="Ara">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="currentColor" stroke-width="2" />
-              <path d="M21 21l-4.4-4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-          </button>
-        </div>
+        <a class="btn btn--primary btn--sm" href="#basvuru">Başvur</a>
       </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section id="hero" class="hero" aria-label="Hero">
-      <div class="hero__grid">
-        <div class="hero__left container">
-          <div class="hero__meta">
-            <span class="hero__metaDot"></span>
-            <span>Koç Topluluğu · Fark Yaratan İş Yerleri</span>
-          </div>
-          <h1 class="hero__title">
-            <span class="hero__titleLine">Tüpraş'ta</span>
-            <span class="hero__titleLine hero__titleScript">yaşam,</span>
-            <span class="hero__titleLine">insanın etrafında</span>
-            <span class="hero__titleLine hero__titleScript hero__titleScript--alt">şekillenir.</span>
-          </h1>
-          <p class="hero__lead">
-            Kariyer fırsatlarından gelişim olanaklarına, esnek yan faydalardan sosyal yaşama kadar;
-            insan odaklı, çevik ve dijital bir çalışan deneyimi.
-          </p>
-          <div class="hero__ctaRow">
-            <a class="btn btn--primary" href="#about">Yaşamı Keşfet</a>
-            <a class="btn btn--line" href="#gelisim">
-              <span class="btn__playIcon" aria-hidden="true">▶</span>
-              Tüpraş Akademi
-            </a>
-          </div>
-          <div class="hero__locations">
-            <span class="hero__locLabel">Lokasyonlar</span>
-            <div class="hero__locGrid">
-              <span>İstanbul</span>
-              <span>İzmit</span>
-              <span>İzmir</span>
-              <span>Kırıkkale</span>
-              <span>Batman</span>
-              <span>Londra</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__right">
-          <div class="hero__visual">
-            <div class="hero__visualRing hero__visualRing--1"></div>
-            <div class="hero__visualRing hero__visualRing--2"></div>
-            <div class="hero__visualRing hero__visualRing--3"></div>
-            <div class="hero__visualBrush"></div>
-            <div class="hero__visualText">
-              <span class="hero__bigNum">5</span>
-              <span class="hero__bigLabel">boyut</span>
-              <em>mesleki · sosyal · mental · fiziksel · finansal</em>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero__marquee" aria-hidden="true">
-        <div class="hero__marqueeTrack">
-          <span>İnsan Odaklı</span><span>·</span>
-          <span>Çevik</span><span>·</span>
-          <span>Dijital</span><span>·</span>
-          <span>Sürdürülebilir</span><span>·</span>
-          <span>Birlikte</span><span>·</span>
-          <span>İnsan Odaklı</span><span>·</span>
-          <span>Çevik</span><span>·</span>
-          <span>Dijital</span><span>·</span>
-          <span>Sürdürülebilir</span><span>·</span>
-          <span>Birlikte</span><span>·</span>
-        </div>
-      </div>
-    </section>
-
     <main>
-      <!-- ===== ABOUT ===== -->
-      <section id="about" class="section section--about" aria-label="Tüpraş Yaşam">
-        <div class="container about">
-          <div class="about__media">
-            <div class="about__atomWrap">
-              <img class="about__atom" src="assets/images/atom.png" alt="Tüpraş Yaşam bütüncül yapı" />
+      <!-- ============ HERO ============ -->
+      <section id="hero" class="hero" aria-label="Tüpraş Yaşam">
+        <div class="hero__media" aria-hidden="true">
+          <img src="assets/images/KK_00271.JPG" alt="" />
+        </div>
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              İnsanın merkezde olduğu, <span class="brush">birlikte büyüyen</span> bir yaşam.
+            </h1>
+            <p class="hero__lead">
+              Türkiye'nin en büyük sanayi şirketi Tüpraş; kariyer fırsatlarından gelişim olanaklarına,
+              esnek yan faydalardan sosyal yaşama kadar insan odaklı, çevik ve dijital bir çalışan
+              deneyimi sunar.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#basvuru">Açık pozisyonları gör</a>
             </div>
           </div>
-          <div class="about__text">
-            <div class="chapter">
-              <span class="chapter__num">00</span>
-              <span class="chapter__label">Tüpraş Yaşam</span>
-            </div>
-            <h2 class="section__title">
-              Beş boyutta <em>bir yaşam.</em>
-            </h2>
-            <p class="about__lead">
-              Tüpraş Yaşam; mesleki, sosyal, mental, fiziksel ve finansal boyutlarda tasarlanmış
-              programlar, yan faydalar ve topluluklardan oluşan bütüncül bir çalışan deneyimidir.
-            </p>
-            <div class="about__pills">
-              <span class="pill pill--blue">Mesleki</span>
-              <span class="pill pill--green">Sosyal</span>
-              <span class="pill pill--teal">Mental</span>
-              <span class="pill pill--orange">Fiziksel</span>
-              <span class="pill pill--dark">Finansal</span>
-            </div>
-            <blockquote class="about__quote">
-              "İstanbul, İzmit, İzmir, Kırıkkale, Batman ve Londra'da çalışma arkadaşlarımıza
-              insan odaklı, çevik ve dijital bir deneyim sunuyoruz."
-            </blockquote>
+        </div>
+        <div class="hero__scroll" aria-hidden="true">
+          <span></span>SCROLL
+        </div>
+      </section>
+
+      <!-- ============ STAT STRIP ============ -->
+      <section class="strip" aria-label="Sayılarla Tüpraş">
+        <div class="container strip__inner">
+          <div class="strip__item">
+            <strong data-count="5000" data-suffix="+">0</strong>
+            <span>Çalışan</span>
+          </div>
+          <div class="strip__item">
+            <strong>6</strong>
+            <span>Lokasyon</span>
           </div>
         </div>
       </section>
 
-      <!-- ===== 1. TÜPRAŞ'TA ÇALIŞMA ===== -->
-      <section id="calisma" class="section section--chapter chapter--work" aria-label="Tüpraş'ta Çalışma">
-        <div class="chapterHead container">
-          <div class="chapter chapter--inv">
-            <span class="chapter__num">01</span>
-            <span class="chapter__label">Tüpraş'ta Çalışma</span>
+      <!-- ============ YAŞAM / INTRO ============ -->
+      <section id="yasam" class="section" aria-label="Tüpraş Yaşam hakkında">
+        <div class="container section__grid--intro">
+          <div class="section__head">
+            <h2 class="section__title">
+              Yaşamın tüm boyutlarını<br /><span class="brush">bir arada</span> düşünüyoruz.
+            </h2>
+            <p class="section__lead">
+              İstanbul'daki Genel Müdürlüğümüz; İzmit, İzmir, Kırıkkale ve Batman'daki
+              Rafinerilerimiz ile Londra Trading ofislerimizde çalışma arkadaşlarımıza
+              bütüncül bir deneyim sunuyoruz.
+            </p>
           </div>
-          <h2 class="section__title section__title--xl">
-            İnsan odaklı,<br />çevik ve <em>dijital.</em>
-          </h2>
-          <p class="chapterHead__lead">
-            Türkiye'nin en büyük sanayi şirketinde çalışma deneyimi; kariyer fırsatlarından yan
-            faydalara, kampüslerden genç yetenek programlarına kadar bütüncül.
-          </p>
+          <div class="section__atom" aria-hidden="true">
+            <img src="assets/images/atom.png" alt="" />
+          </div>
+        </div>
+
+        <!-- PILLARS BENTO (3 equal columns) -->
+        <div class="container">
+          <div class="bento bento--pillars">
+            <article class="tile pillar pillar--mesleki">
+              <div class="tile__top">
+                <h3 class="tile__title">Mesleki</h3>
+                <span class="tile__dot" aria-hidden="true"></span>
+              </div>
+              <ul class="tile__list">
+                <li>PLT (Vision, Up, Future)</li>
+                <li>Lead · LiderSensin</li>
+                <li>Yetenek Gelişimi</li>
+                <li>RAYEP</li>
+                <li>Teknik Gelişim Kataloğu</li>
+                <li>Yetkinlik Gelişim Kataloğu</li>
+                <li>Koç Akademi</li>
+                <li>Çevik Dönüşüm</li>
+                <li>Ünvan Tasarımı</li>
+                <li>BiOmuzVer</li>
+              </ul>
+            </article>
+
+            <article class="tile pillar pillar--mental">
+              <div class="tile__top">
+                <h3 class="tile__title">Mental</h3>
+                <span class="tile__dot" aria-hidden="true"></span>
+              </div>
+              <ul class="tile__list">
+                <li>Tüpraş Gönüllüleri</li>
+                <li>Koç Healthcare</li>
+                <li>Çeşitlilik, Eşitlik ve Kapsayıcılık</li>
+                <li>Zor Gün Desteği</li>
+                <li>Jest</li>
+                <li>Psikolojik Danışmanlık ve Destek</li>
+              </ul>
+            </article>
+
+            <article class="tile pillar pillar--sosyal">
+              <div class="tile__top">
+                <h3 class="tile__title">Sosyal</h3>
+                <span class="tile__dot" aria-hidden="true"></span>
+              </div>
+              <ul class="tile__list">
+                <li>İletişim Toplantısı</li>
+                <li>Kültür ve Sanat Faaliyetleri</li>
+                <li>Kıdem Törenleri</li>
+                <li>SEK · Sosyal Etkinlik Kulüpleri</li>
+                <li>Çocuk Spor Okulları</li>
+              </ul>
+            </article>
+
+            <article class="tile pillar pillar--finansal">
+              <div class="tile__top">
+                <h3 class="tile__title">Finansal</h3>
+                <span class="tile__dot" aria-hidden="true"></span>
+              </div>
+              <ul class="tile__list">
+                <li>Koç Ailem</li>
+                <li>Anlık Çek</li>
+                <li>Spot Bonus</li>
+                <li>ZBB</li>
+                <li>Koç Emeklilik Vakfı</li>
+                <li>Kreş Yardımı</li>
+                <li>Tokenflex · Flextra</li>
+              </ul>
+            </article>
+
+            <article class="tile pillar pillar--fiziki">
+              <div class="tile__top">
+                <h3 class="tile__title">Fiziki</h3>
+                <span class="tile__dot" aria-hidden="true"></span>
+              </div>
+              <ul class="tile__list">
+                <li>Sosyal Tesisler</li>
+                <li>İş Kıyafetleri</li>
+                <li>Lojman · Görev Evi</li>
+                <li>Spor Salonları & Kulüpleri</li>
+                <li>Servis Deneyimi</li>
+                <li>Yemek Deneyimi</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ÇALIŞMA (2-col bento) ============ -->
+      <section id="calisma" class="section" aria-label="Tüpraş'ta Çalışma">
+        <div class="container section__grid--intro">
+          <div class="section__head">
+            <h2 class="section__title">
+              Tüpraş'ta <span class="brush">Çalışma.</span>
+            </h2>
+            <p class="section__lead">
+              İnsan odaklı, çevik ve dijital bir çalışan deneyimi.
+            </p>
+          </div>
         </div>
 
         <div class="container">
-          <div class="storyGrid">
-            <article class="story story--01">
-              <div class="story__index">
-                <span class="story__num">01.1</span>
-                <span class="story__line"></span>
+          <div class="bento bento--work">
+            <article class="tile tile--media tile--tall">
+              <div class="tile__photo">
+                <img src="assets/images/Tüpraşlı olmak.jpeg" alt="Tüpraşlı olmak" />
               </div>
-              <div class="story__body">
-                <h3 class="story__title">Tüpraşlı Olmak</h3>
-                <p class="story__text">
+              <div class="tile__caption">
+                <h3 class="tile__title tile__title--lg">Tüpraşlı Olmak</h3>
+                <p class="tile__text tile__text--onDark">
                   Türkiye'nin en büyük sanayi şirketi Tüpraş; kariyer fırsatlarından gelişim
                   olanaklarına, esnek yan faydalardan sosyal yaşama kadar insan odaklı, çevik ve
                   dijital bir çalışan deneyimi sunar.
                 </p>
-                <p class="story__text">
-                  İstanbul'daki Genel Müdürlüğümüz; İzmit, İzmir, Kırıkkale ve Batman'daki
-                  Rafinerilerimiz ile Londra Trading ofislerimizde açık pozisyonları Koç Kariyerim
-                  ve LinkedIn İlanlar sayfalarından inceleyebilirsin.
+                <p class="tile__text tile__text--onDark">
+                  İstanbul Genel Müdürlüğümüz; İzmit, İzmir, Kırıkkale ve Batman Rafinerileri ile
+                  Londra Trading ofislerindeki açık pozisyonları Koç Kariyerim ve LinkedIn
+                  İlanlar sayfalarından inceleyebilirsin.
                 </p>
-                <a class="story__link" href="#">Koç Kariyerim <span>→</span></a>
+                <ul class="tile__locations">
+                  <li>İstanbul</li><li>İzmit</li><li>İzmir</li><li>Kırıkkale</li><li>Batman</li><li>Londra</li>
+                </ul>
               </div>
             </article>
 
-            <article class="story story--02">
-              <div class="story__index">
-                <span class="story__num">01.2</span>
-                <span class="story__line"></span>
+            <article class="tile tile--cta">
+              <h3 class="tile__title">Açık pozisyonları gör</h3>
+              <p class="tile__text tile__text--onDark">
+                Koç Kariyerim ve LinkedIn İlanlar sayfalarından inceleyebilirsin.
+              </p>
+              <a class="btn btn--primary btn--sm" href="#basvuru">Başvur <span>→</span></a>
+            </article>
+
+            <article class="tile tile--media">
+              <div class="tile__photo">
+                <img src="assets/images/Tüpraşta çalışmak.jpeg" alt="Tüpraş'ta çalışma ortamı" />
               </div>
-              <div class="story__body">
-                <h3 class="story__title">Tüpraş'ta Çalışma Ortamı</h3>
-                <p class="story__text">
-                  <strong>Koç Topluluğu Fark Yaratan İş Yerleri Ödülleri</strong> alan Tüpraş
+              <div class="tile__caption">
+                <h3 class="tile__title">Tüpraş'ta Çalışma Ortamı</h3>
+                <p class="tile__text tile__text--onDark">
+                  Koç Topluluğu <strong>Fark Yaratan İş Yerleri Ödülleri</strong> alan Tüpraş
                   Kampüslerinde; sosyal tesisler, spor salonları, lojmanlar, kafeler ve mola
-                  alanları ile çalışma arkadaşlarımıza birlikte vakit geçirme, sosyalleşme ve
-                  dinlenme imkânı sunulur.
+                  alanları çalışma arkadaşlarımıza birlikte vakit geçirme, sosyalleşme ve
+                  dinlenme imkânı sunar.
                 </p>
-                <div class="story__chips">
-                  <span>Sosyal tesisler</span>
-                  <span>Spor salonları</span>
-                  <span>Lojmanlar</span>
-                  <span>Kafeler</span>
-                  <span>Mola alanları</span>
-                </div>
               </div>
             </article>
 
-            <article class="story story--03">
-              <div class="story__index">
-                <span class="story__num">01.3</span>
-                <span class="story__line"></span>
+            <article class="tile tile--media">
+              <div class="tile__photo">
+                <img src="assets/images/01 KV 2026_Esin&Berkay.jpg" alt="Tüpraş Nextremers genç yetenekler" />
               </div>
-              <div class="story__body">
-                <h3 class="story__title">Tüpraş'ta Genç Yetenekler</h3>
-                <p class="story__text">
-                  <strong>Tüpraş Nextremers</strong> yalnızca bir yetenek programı değil;
+              <div class="tile__caption">
+                <h3 class="tile__title">Tüpraş'ta Genç Yetenekler</h3>
+                <p class="tile__text tile__text--onDark">
+                  Tüpraş <strong>Nextremers</strong> yalnızca bir yetenek programı değil;
                   geleceğin Tüpraşlılarına özel, gençlerle birlikte tasarlanmış bütüncül bir iş
-                  deneyimidir.
+                  deneyimidir. 3–4. sınıf öğrencileri, yüksek lisans öğrencileri ve yeni mezun
+                  genç yetenekler için gerçek projeler, uluslararası eğitimler ve topluluklar.
                 </p>
-                <ul class="story__bullets">
-                  <li>Profesyonel çalışma hayatını gerçek projelerle deneyimlersin</li>
-                  <li>Uluslararası eğitim programlarıyla gelişirsin</li>
-                  <li>Spor, gönüllülük ve sosyal etkinlik kulüplerinin parçası olursun</li>
-                </ul>
-                <a class="story__link" href="#">Nextremers Programı <span>→</span></a>
+                <a class="tile__link" href="#">Nextremers Programı <span>→</span></a>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ===== 2. TÜPRAŞ'TA SOSYAL HAYAT ===== -->
-      <section id="sosyal" class="section section--chapter chapter--social" aria-label="Tüpraş'ta Sosyal Hayat">
-        <div class="chapterHead container">
-          <div class="chapter chapter--inv">
-            <span class="chapter__num">02</span>
-            <span class="chapter__label">Tüpraş'ta Sosyal Hayat</span>
-          </div>
-          <h2 class="section__title section__title--xl">
-            Birlikte oynamak,<br />birlikte <em>iyileşmek.</em>
-          </h2>
-        </div>
-
-        <div class="container">
-          <div class="mosaic">
-            <article class="mosaic__card mosaic__card--lg mosaic__card--sports">
-              <div class="mosaic__stat"><strong>20<sup>+</sup></strong><span>Spor Branşı</span></div>
-              <div class="mosaic__content">
-                <span class="mosaic__tag">02.1 · Spor</span>
-                <h3 class="mosaic__title">Tüpraş Spor Takımları</h3>
-                <p class="mosaic__text">
-                  20'den fazla branşta yıl boyunca antrenmanlara ve turnuvalara katılır;
-                  <strong>Koç Topluluğu Spor Şenliklerinde</strong> Tüpraş'ı temsil ederiz.
-                </p>
-                <span class="mosaic__film">🎬 Spor takımları filmi yakında</span>
-              </div>
-            </article>
-
-            <article class="mosaic__card mosaic__card--clubs">
-              <div class="mosaic__content">
-                <span class="mosaic__tag">02.2 · Kulüpler</span>
-                <h3 class="mosaic__title">Sosyal Etkinlik Kulüpleri</h3>
-                <p class="mosaic__text">
-                  Tiyatrodan dansa, müzikten kültürel gezilere, satrançtan doğa aktivitelerine
-                  kadar bir araya gelme fırsatları.
-                </p>
-                <div class="mosaic__chipCloud">
-                  <span>Tiyatro</span>
-                  <span>Dans</span>
-                  <span>Müzik</span>
-                  <span>Satranç</span>
-                  <span>Doğa</span>
-                  <span>Kültür Gezisi</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="mosaic__card mosaic__card--wide mosaic__card--volunteers">
-              <div class="mosaic__content">
-                <span class="mosaic__tag">02.3 · Gönüllülük</span>
-                <h3 class="mosaic__title">Tüpraş Gönüllüleri</h3>
-                <p class="mosaic__text">
-                  Tüpraş ve Koç Gönüllüleri, ihtiyaç olan her yerde birlikte hareket ederek
-                  dayanışmayı güçlendirir.
-                </p>
-                <div class="volGrid">
-                  <div class="volItem">
-                    <div class="volItem__num">5</div>
-                    <div class="volItem__label">Şehir</div>
-                  </div>
-                  <div class="volItem">
-                    <div class="volItem__num">5.000<sup>+</sup></div>
-                    <div class="volItem__label">Konteyner</div>
-                  </div>
-                  <div class="volItem">
-                    <div class="volItem__num">1.000<sup>+</sup></div>
-                    <div class="volItem__label">Gönüllü</div>
-                  </div>
-                </div>
-                <ul class="volList">
-                  <li>Umut Kentler projesi</li>
-                  <li>Kadın dernekleriyle dayanışma</li>
-                  <li>Doğa ve kıyı temizliği</li>
-                  <li>Hayvan barınağı ziyaretleri</li>
-                  <li>Çocuklara hediye ve eğitim desteği</li>
-                </ul>
-                <span class="mosaic__film">🎬 Gönüllüler filmi yakında</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== 3. TÜPRAŞ'TA GELİŞİM ===== -->
-      <section id="gelisim" class="section section--chapter chapter--growth" aria-label="Tüpraş'ta Gelişim">
-        <div class="chapterHead container">
-          <div class="chapter chapter--inv">
-            <span class="chapter__num">03</span>
-            <span class="chapter__label">Tüpraş'ta Gelişim</span>
-          </div>
-          <h2 class="section__title section__title--xl">
-            Global bir <em>öğrenme</em><br />ekosistemi.
-          </h2>
-          <p class="chapterHead__lead">
-            <strong>Tüpraş Akademi</strong> ve <strong>Koç Akademi</strong> ile teknik, davranışsal
-            ve liderlik gelişimine yönelik; Koç Topluluğu şirketleri genelinde gelişim, kariyer
-            hareketliliği, rotasyon ve takdir olanakları.
-          </p>
-        </div>
-
-        <div class="container growthLayout">
-          <div class="growthStage">
-            <div class="growthStage__badge">Tüpraş Akademi</div>
-            <div class="growthStage__art" aria-hidden="true">
-              <div class="growthStage__pulse"></div>
-              <div class="growthStage__ring"></div>
-              <div class="growthStage__core">TA</div>
-            </div>
-            <h3 class="growthStage__title">Akademi Binası</h3>
-            <p class="growthStage__text">
-              Fiziksel ve dijital kanallarla birlikte öğrenme deneyimi sunar.
+      <!-- ============ SOSYAL ============ -->
+      <section id="sosyal" class="section" aria-label="Tüpraş'ta Sosyal Hayat">
+        <div class="container section__grid--intro">
+          <div class="section__head">
+            <h2 class="section__title">
+              Tüpraş'ta <span class="brush">Sosyal Hayat.</span>
+            </h2>
+            <p class="section__lead">
+              Spor takımlarından gönüllülüğe, sosyal etkinlik kulüplerinden kültürel gezilere;
+              çalışma arkadaşlarımız ve aileleri için zengin bir sosyal yaşam.
             </p>
-            <div class="growthStage__film">🎬 Hackathon filmi yakında</div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="bento bento--social">
+            <article class="tile tile--media tile--feature">
+              <div class="tile__photo">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/D4D09AQFAP48kaIFxaQ/videocover-low/B4DZ1TEav0HIAc-/0/1775215168181?e=1778112000&v=beta&t=CwylsOXP8-ZNmco7Fp4e2sTqdxg9ymN7iYT20AeBKKA"
+                  alt="Tüpraş Sosyal Etkinlik Kulüpleri"
+                  referrerpolicy="no-referrer"
+                />
+              </div>
+              <div class="tile__caption">
+                <h3 class="tile__title tile__title--lg">Tüpraş Sosyal Etkinlik Kulüpleri</h3>
+                <p class="tile__text tile__text--onDark">
+                  Tüpraş Sosyal Etkinlik Kulüpleri; tiyatrodan dansa, müzikten kültürel gezilere,
+                  satrançtan doğada aktivitelere kadar etkinliklerle çalışma arkadaşlarımıza ve
+                  ailelerine bir araya gelme fırsatı sunar.
+                </p>
+                <ul class="tile__locations">
+                  <li>Tiyatro</li><li>Dans</li><li>Müzik</li><li>Satranç</li><li>Doğa</li><li>Kültür Gezisi</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="tile tile--media">
+              <div class="tile__video">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/V_tkr9Rx7Mk?rel=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=V_tkr9Rx7Mk&controls=0"
+                  title="Tüpraş Spor Takımları"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="tile__caption">
+                <h3 class="tile__title">Tüpraş Spor Takımları</h3>
+                <p class="tile__text tile__text--onDark">
+                  <strong>20'den fazla branşta</strong> yıl boyunca antrenmanlara ve turnuvalara
+                  katılır, <strong>Koç Topluluğu Spor Şenliklerinde</strong> Tüpraş'ı temsil eder.
+                </p>
+              </div>
+            </article>
+
+            <article class="tile tile--media">
+              <div class="tile__photo">
+                <img src="assets/images/gönüllü.jpg" alt="Tüpraş Gönüllüleri" />
+              </div>
+              <div class="tile__caption">
+                <h3 class="tile__title">Tüpraş Gönüllüleri</h3>
+                <p class="tile__text tile__text--onDark">
+                  Tüpraş ve Koç Gönüllüleri ihtiyaç olan her yerde birlikte hareket ederek
+                  dayanışmayı güçlendirecek gönüllülük programları sunar.
+                </p>
+              </div>
+            </article>
           </div>
 
-          <div class="growthFeed">
-            <article class="growthRow">
-              <div class="growthRow__head">
-                <span class="growthRow__num">03.1</span>
-                <h4 class="growthRow__title">Global İş Birlikleri</h4>
-              </div>
-              <p class="growthRow__text">
-                Dünyanın saygın kurumlarıyla ortak programlar ve eğitim iş birlikleri.
-              </p>
-              <div class="growthRow__badges">
-                <span>Harvard</span>
-                <span>Stanford</span>
-                <span>MIT</span>
-                <span>Fraunhofer</span>
-              </div>
-            </article>
-
-            <article class="growthRow">
-              <div class="growthRow__head">
-                <span class="growthRow__num">03.2</span>
-                <h4 class="growthRow__title">PLT — Program for Leadership Transition</h4>
-              </div>
-              <p class="growthRow__text">
-                Kapsamlı liderlik ve yetenek gelişimi programı. Hazırlıktan uygulamaya geniş bir
-                kapsam.
-              </p>
-            </article>
-
-            <article class="growthRow">
-              <div class="growthRow__head">
-                <span class="growthRow__num">03.3</span>
-                <h4 class="growthRow__title">Mentorluk & Koçluk</h4>
-              </div>
-              <p class="growthRow__text">
-                Alanında uzman iç ve dış eğitmenlerden bireysel mentorluk ve koçluk desteği.
-              </p>
-            </article>
-
-            <article class="growthRow">
-              <div class="growthRow__head">
-                <span class="growthRow__num">03.4</span>
-                <h4 class="growthRow__title">Rotasyon & Hareketlilik</h4>
-              </div>
-              <p class="growthRow__text">
-                Koç Topluluğu genelinde kariyer hareketliliği, rotasyon ve takdir olanakları.
-              </p>
-            </article>
+          <!-- Umut Kentler strip -->
+          <div class="volStrip" aria-label="Umut Kentler">
+            <div class="volStrip__label">
+              <strong>Umut Kentler</strong>
+              <span>Tüpraş Gönüllüleri</span>
+            </div>
+            <div class="volStrip__row">
+              <div><strong>5</strong><span>Şehir</span></div>
+              <div><strong data-count="5000" data-suffix="+">0</strong><span>Konteyner</span></div>
+              <div><strong data-count="1000" data-suffix="+">0</strong><span>Gönüllü</span></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== CTA ===== -->
-      <section class="section section--cta" aria-label="Başvuru">
+      <!-- ============ GELİŞİM ============ -->
+      <section id="gelisim" class="section" aria-label="Tüpraş'ta Gelişim">
+        <div class="container section__grid--intro">
+          <div class="section__head">
+            <h2 class="section__title">
+              Global bir öğrenme<br /><span class="brush">ekosistemi.</span>
+            </h2>
+            <p class="section__lead">
+              <strong>Tüpraş Akademi</strong> ve <strong>Koç Akademi</strong> ile teknik,
+              davranışsal ve liderlik gelişimine yönelik global bir ekosistem. Koç Topluluğu
+              şirketleri genelinde gelişim, kariyer hareketliliği, rotasyon ve takdir olanakları.
+            </p>
+          </div>
+        </div>
+
         <div class="container">
-          <div class="bigCta">
-            <div class="bigCta__bg"></div>
-            <div class="bigCta__content">
-              <span class="bigCta__eyebrow">Geleceği birlikte kuralım</span>
-              <h2 class="bigCta__title">
-                Tüpraş Yaşam'ın <em>bir parçası</em> olmaya hazır mısın?
-              </h2>
-              <div class="bigCta__actions">
-                <a class="btn btn--primary" href="#">Koç Kariyerim</a>
-                <a class="btn btn--line btn--line-dark" href="#">LinkedIn İlanlar</a>
+          <div class="bento bento--growth">
+            <article class="tile tile--video tile--wide">
+              <div class="tile__video tile__video--16x9">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/PDZPWXLlFRc?rel=0&modestbranding=1"
+                  title="Tüpraş Akademi Hackathon"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="tile__caption">
+                <h3 class="tile__title">Tüpraş Akademi Hackathon</h3>
+                <p class="tile__text tile__text--onDark">Birlikte kodluyoruz.</p>
+              </div>
+            </article>
+
+            <article class="tile tile--text">
+              <span class="tile__num">01</span>
+              <h4 class="tile__title tile__title--sm">PLT · Program for Leadership Transition</h4>
+              <p class="tile__text tile__text--onDark">Kapsamlı liderlik ve yetenek gelişimi programı.</p>
+            </article>
+            <article class="tile tile--text">
+              <span class="tile__num">02</span>
+              <h4 class="tile__title tile__title--sm">Mentorluk & Koçluk</h4>
+              <p class="tile__text tile__text--onDark">Uzman iç ve dış eğitmenlerden bireysel destek.</p>
+            </article>
+            <article class="tile tile--text">
+              <span class="tile__num">03</span>
+              <h4 class="tile__title tile__title--sm">Rotasyon & Hareketlilik</h4>
+              <p class="tile__text tile__text--onDark">Koç Topluluğu genelinde kariyer hareketliliği ve rotasyon.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Sliding partner logo marquee -->
+        <div class="marquee" aria-label="Global İş Birlikleri">
+          <div class="marquee__head container">
+            <strong>Global İş Birlikleri</strong>
+          </div>
+          <div class="marquee__viewport">
+            <div class="marquee__track">
+              <!-- group 1 -->
+              <div class="partnerTile partnerTile--harvard">
+                <span class="partnerTile__crest" aria-hidden="true">
+                  <svg viewBox="0 0 48 48" width="28" height="28"><path fill="#A41F35" d="M8 6h32v36H8z"/><text x="24" y="20" text-anchor="middle" font-family="serif" font-size="7" font-weight="700" fill="#fff">VE · RI</text><text x="24" y="32" text-anchor="middle" font-family="serif" font-size="7" font-weight="700" fill="#fff">TAS</text></svg>
+                </span>
+                <span class="partnerTile__name">HARVARD</span>
+                <span class="partnerTile__sub">UNIVERSITY</span>
+              </div>
+              <div class="partnerTile partnerTile--mit">
+                <span class="partnerTile__mono">MIT</span>
+                <span class="partnerTile__divider"></span>
+                <span class="partnerTile__name">xPRO</span>
+              </div>
+              <div class="partnerTile partnerTile--stanford">
+                <span class="partnerTile__serifRed">STANFORD</span>
+                <span class="partnerTile__serif">BUSINESS</span>
+                <span class="partnerTile__tiny">Graduate School of Business</span>
+              </div>
+              <div class="partnerTile partnerTile--cambridge">
+                <span class="partnerTile__crest" aria-hidden="true">
+                  <svg viewBox="0 0 24 28" width="24" height="28"><path d="M12 2l9 4v9c0 6-4.5 10-9 11-4.5-1-9-5-9-11V6l9-4z" fill="#A41F35"/><text x="12" y="18" text-anchor="middle" font-family="serif" font-size="10" font-weight="700" fill="#fff">†</text></svg>
+                </span>
+                <span class="partnerTile__name">UNIVERSITY OF</span>
+                <span class="partnerTile__nameLg">CAMBRIDGE</span>
+                <span class="partnerTile__tiny">Judge Business School</span>
+              </div>
+              <div class="partnerTile partnerTile--fraunhofer">
+                <span class="partnerTile__fraunhofer" aria-hidden="true">
+                  <svg viewBox="0 0 40 28" width="40" height="28"><path fill="#179c7d" d="M4 6l10 5-10 5zM4 14l10 5-10 5z" opacity="0.9"/></svg>
+                </span>
+                <span class="partnerTile__sans">Fraunhofer</span>
+              </div>
+              <div class="partnerTile partnerTile--columbia">
+                <span class="partnerTile__columbia">
+                  <span class="partnerTile__columbiaMark" aria-hidden="true">≈</span>
+                  Columbia Business School
+                </span>
+                <span class="partnerTile__tiny">At the very center of business</span>
+                <span class="partnerTile__subRule">Executive Education</span>
+              </div>
+              <div class="partnerTile partnerTile--koc">
+                <span class="partnerTile__kocMark" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" width="26" height="26"><circle cx="16" cy="16" r="14" fill="#c8102e"/><path d="M16 6 c5 0 9 4 9 9 c0 -3 -3 -6 -6 -6 c-3 0 -6 3 -6 6 c0 3 3 6 6 6 c3 0 6 -3 6 -6 c0 5 -4 9 -9 9 c-5 0 -9 -4 -9 -9 c0 -5 4 -9 9 -9 z" fill="#fff"/></svg>
+                </span>
+                <span class="partnerTile__koc">KOÇ</span>
+                <span class="partnerTile__kocSub">ÜNİVERSİTESİ</span>
+              </div>
+              <div class="partnerTile partnerTile--texas">
+                <span class="partnerTile__texas"><strong>TEXAS</strong>McCombs</span>
+                <span class="partnerTile__tiny">The University of Texas at Austin</span>
+                <span class="partnerTile__tiny">McCombs School of Business</span>
+              </div>
+              <div class="partnerTile partnerTile--kellogg">
+                <span class="partnerTile__kellogg">
+                  <span style="color:#4E2A84;">Northwestern</span>
+                  <span class="partnerTile__kelloggBar">|</span>
+                  <span style="color:#4E2A84;">Kellogg</span>
+                </span>
+              </div>
+              <div class="partnerTile partnerTile--mext">
+                <span class="partnerTile__mext">ME<em>X</em>T</span>
+              </div>
+
+              <!-- group 2 (duplicate for seamless loop) -->
+              <div class="partnerTile partnerTile--harvard" aria-hidden="true">
+                <span class="partnerTile__crest">
+                  <svg viewBox="0 0 48 48" width="28" height="28"><path fill="#A41F35" d="M8 6h32v36H8z"/><text x="24" y="20" text-anchor="middle" font-family="serif" font-size="7" font-weight="700" fill="#fff">VE · RI</text><text x="24" y="32" text-anchor="middle" font-family="serif" font-size="7" font-weight="700" fill="#fff">TAS</text></svg>
+                </span>
+                <span class="partnerTile__name">HARVARD</span>
+                <span class="partnerTile__sub">UNIVERSITY</span>
+              </div>
+              <div class="partnerTile partnerTile--mit" aria-hidden="true">
+                <span class="partnerTile__mono">MIT</span>
+                <span class="partnerTile__divider"></span>
+                <span class="partnerTile__name">xPRO</span>
+              </div>
+              <div class="partnerTile partnerTile--stanford" aria-hidden="true">
+                <span class="partnerTile__serifRed">STANFORD</span>
+                <span class="partnerTile__serif">BUSINESS</span>
+                <span class="partnerTile__tiny">Graduate School of Business</span>
+              </div>
+              <div class="partnerTile partnerTile--cambridge" aria-hidden="true">
+                <span class="partnerTile__crest">
+                  <svg viewBox="0 0 24 28" width="24" height="28"><path d="M12 2l9 4v9c0 6-4.5 10-9 11-4.5-1-9-5-9-11V6l9-4z" fill="#A41F35"/><text x="12" y="18" text-anchor="middle" font-family="serif" font-size="10" font-weight="700" fill="#fff">†</text></svg>
+                </span>
+                <span class="partnerTile__name">UNIVERSITY OF</span>
+                <span class="partnerTile__nameLg">CAMBRIDGE</span>
+                <span class="partnerTile__tiny">Judge Business School</span>
+              </div>
+              <div class="partnerTile partnerTile--fraunhofer" aria-hidden="true">
+                <span class="partnerTile__fraunhofer">
+                  <svg viewBox="0 0 40 28" width="40" height="28"><path fill="#179c7d" d="M4 6l10 5-10 5zM4 14l10 5-10 5z" opacity="0.9"/></svg>
+                </span>
+                <span class="partnerTile__sans">Fraunhofer</span>
+              </div>
+              <div class="partnerTile partnerTile--columbia" aria-hidden="true">
+                <span class="partnerTile__columbia">
+                  <span class="partnerTile__columbiaMark">≈</span>
+                  Columbia Business School
+                </span>
+                <span class="partnerTile__tiny">At the very center of business</span>
+                <span class="partnerTile__subRule">Executive Education</span>
+              </div>
+              <div class="partnerTile partnerTile--koc" aria-hidden="true">
+                <span class="partnerTile__kocMark">
+                  <svg viewBox="0 0 32 32" width="26" height="26"><circle cx="16" cy="16" r="14" fill="#c8102e"/><path d="M16 6 c5 0 9 4 9 9 c0 -3 -3 -6 -6 -6 c-3 0 -6 3 -6 6 c0 3 3 6 6 6 c3 0 6 -3 6 -6 c0 5 -4 9 -9 9 c-5 0 -9 -4 -9 -9 c0 -5 4 -9 9 -9 z" fill="#fff"/></svg>
+                </span>
+                <span class="partnerTile__koc">KOÇ</span>
+                <span class="partnerTile__kocSub">ÜNİVERSİTESİ</span>
+              </div>
+              <div class="partnerTile partnerTile--texas" aria-hidden="true">
+                <span class="partnerTile__texas"><strong>TEXAS</strong>McCombs</span>
+                <span class="partnerTile__tiny">The University of Texas at Austin</span>
+                <span class="partnerTile__tiny">McCombs School of Business</span>
+              </div>
+              <div class="partnerTile partnerTile--kellogg" aria-hidden="true">
+                <span class="partnerTile__kellogg">
+                  <span style="color:#4E2A84;">Northwestern</span>
+                  <span class="partnerTile__kelloggBar">|</span>
+                  <span style="color:#4E2A84;">Kellogg</span>
+                </span>
+              </div>
+              <div class="partnerTile partnerTile--mext" aria-hidden="true">
+                <span class="partnerTile__mext">ME<em>X</em>T</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CTA ============ -->
+      <section id="basvuru" class="section cta" aria-label="Başvuru">
+        <div class="container cta__inner">
+          <h2 class="cta__title">Geleceğin Tüpraşlıları <span class="brush">aramızda.</span></h2>
+          <p class="cta__text">Açık pozisyonları incele, Tüpraş Yaşam'ın bir parçası ol.</p>
+          <div class="cta__actions">
+            <a class="btn btn--primary btn--lg" href="#">Koç Kariyerim</a>
+            <a class="btn btn--ghost btn--lg" href="#">LinkedIn İlanlar</a>
           </div>
         </div>
       </section>
@@ -440,15 +541,11 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <div class="footer__brand">
-          <img class="footer__logo" alt="Tüpraş Yaşam" src="assets/images/logo-horizontal.png" />
-          <p class="footer__tagline">
-            İnsan odaklı, çevik ve dijital bir çalışan deneyimi.
-          </p>
-        </div>
+        <img class="footer__logo" src="assets/images/logo-horizontal.png" alt="Tüpraş Yaşam" />
         <div class="footer__cols">
           <div>
-            <h5>Yaşam</h5>
+            <h5>Tüpraş Yaşam</h5>
+            <a href="#yasam">Yaşam</a>
             <a href="#calisma">Çalışma</a>
             <a href="#sosyal">Sosyal Hayat</a>
             <a href="#gelisim">Gelişim</a>
@@ -460,7 +557,7 @@
             <a href="#">Medya Merkezi</a>
           </div>
           <div>
-            <h5>Bağlan</h5>
+            <h5>Takip Et</h5>
             <a href="#">LinkedIn</a>
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
