@@ -1,7 +1,34 @@
 /* ============ Reveal on scroll ============ */
 (function () {
+  const feedbackStylesId = "feedback-news-css";
+  if (!document.getElementById(feedbackStylesId)) {
+    const link = document.createElement("link");
+    link.id = feedbackStylesId;
+    link.rel = "stylesheet";
+    link.href = "./feedback-news.css";
+    document.head.appendChild(link);
+  }
+
+  if (!document.querySelector(".feedbackNews__inner")) {
+    const main = document.querySelector("main");
+    if (main) {
+      const section = document.createElement("section");
+      section.className = "section feedbackNews";
+      section.setAttribute("aria-label", "Tüpraş Yaşam görüş anketi");
+      section.innerHTML = `
+        <div class="container feedbackNews__inner">
+          <div class="feedbackNews__copy">
+            <h2 class="feedbackNews__title">Tüpraş Yaşam’a dair görüşlerini merak ediyoruz.</h2>
+          </div>
+          <a class="btn btn--primary" href="#">Ankete Katıl</a>
+        </div>
+      `;
+      main.appendChild(section);
+    }
+  }
+
   const targets = document.querySelectorAll(
-    ".tile, .strip__item, .section__head, .section__body, .volStrip, .logoWall, .cta__inner"
+    ".tile, .strip__item, .section__head, .section__body, .volStrip, .logoWall, .cta__inner, .feedbackNews__inner"
   );
   if (!("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("is-visible"));
